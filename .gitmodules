@@ -4,3 +4,6 @@
 [submodule "external/CatV2TON"]
 	path = external/CatV2TON
 	url = https://github.com/Zheng-Chong/CatV2TON.git
+[submodule "external/4k-video-upscaler-colab"]
+	path = external/4k-video-upscaler-colab
+	url = https://github.com/linhimtat-hub/4k-video-upscaler-colab.git
