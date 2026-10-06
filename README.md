@@ -104,3 +104,17 @@ Cần cài riêng FaceFusion 3.9.0 và FFmpeg theo hướng dẫn trong [SKILL.m
 Script hỗ trợ chạy thử `--thu`, chọn mặt target, đổi model, tắt enhancer và ghi log từng lượt.
 Mặc định HyperSwap 1A + GFPGAN blend 30; không bảo đảm giữ identity tuyệt đối.
 Đã cài runtime FaceFusion 3.9.0 + FFmpeg, tải và xác minh hash các model của preset,\nvà chạy thành công pipeline ảnh với source/target mẫu chính thức trên CPU (2026-10-06).\nChưa đánh giá độ giống mặt Linh/Đạt hoặc render video thực tế. Mỗi máy chạy vẫn cần cài runtime riêng.
+
+## Thay trang phục (CatVTON / CatV2TON)
+
+Đã thêm repo chính thức bằng submodule cố định phiên bản:
+
+- [CatVTON](https://github.com/Zheng-Chong/CatVTON): thay đồ ảnh qua app local.
+- [CatV2TON](https://github.com/Zheng-Chong/CatV2TON): try-on video, cần dataset, mask và pose.
+
+Lấy code sau khi clone: `git submodule update --init --recursive`.
+Gọi `/thay-trang-phuc cho Linh mặc chiếc váy trong ảnh mẫu, ưu tiên giữ mặt thật`.
+Skill `.agents/skills/thay-trang-phuc/` có launcher localhost và hướng dẫn runtime riêng.
+Chưa cài model hoặc kiểm thử render: máy hiện tại không có GPU CUDA.
+CatVTON dùng CC BY-NC-SA 4.0; cần quyền phù hợp nếu dùng thương mại.
+CatV2TON chưa có LICENSE ở commit đã thêm; xác minh quyền trước dùng thương mại.

@@ -1,0 +1,6 @@
+[submodule "external/CatVTON"]
+	path = external/CatVTON
+	url = https://github.com/Zheng-Chong/CatVTON.git
+[submodule "external/CatV2TON"]
+	path = external/CatV2TON
+	url = https://github.com/Zheng-Chong/CatV2TON.git
