@@ -75,3 +75,12 @@ Repo external/CatVTON (ảnh) và external/CatV2TON (video) được cố địn
 Runtime/dependencies/model cài riêng ngoài workspace; cần GPU CUDA.
 CatV2TON cần mask/pose theo dataset, chưa nhận trực tiếp clip bất kỳ.
 Không tuyên bố đã render chỉ vì clone repo hoặc mở app thành công.
+
+## Upscale video 4K
+
+Dùng repo đã có `external/4k-video-upscaler-colab`, không thêm trùng Video2X/Real-ESRGAN.
+Xem phần Upscale video 4K trong README.md và notebook của submodule.
+Runtime thực thi là GPU Google Colab; clone/kết nối không có nghĩa là đã chạy upscale.
+Notebook mặc định FHD: chọn 4K; dọc dùng 2160×3840, ngang 3840×2160.
+Giữ identity, không chọn model anime cho người thật. Lưu ý bước crop giữa nếu nguồn khác tỷ lệ.
+Chỉ báo hoàn tất sau khi có file cuối và đã kiểm tra kích thước, FPS, thời lượng và âm thanh.

@@ -118,3 +118,22 @@ Skill `.agents/skills/thay-trang-phuc/` có launcher localhost và hướng dẫ
 Chưa cài model hoặc kiểm thử render: máy hiện tại không có GPU CUDA.
 CatVTON dùng CC BY-NC-SA 4.0; cần quyền phù hợp nếu dùng thương mại.
 CatV2TON chưa có LICENSE ở commit đã thêm; xác minh quyền trước dùng thương mại.
+
+## Upscale video 4K — repo Colab đã có
+
+Kết nối repo của người dùng [4k-video-upscaler-colab](https://github.com/linhimtat-hub/4k-video-upscaler-colab)
+qua submodule `external/4k-video-upscaler-colab`, cố định phiên bản.
+
+[Mở notebook của bạn trên Google Colab](https://colab.research.google.com/github/linhimtat-hub/4k-video-upscaler-colab/blob/main/4k_Video_Upscaler_Colab_%28Real_ESRGAN%29.ipynb).
+
+1. Chọn runtime GPU, chạy cell cài đặt.
+2. Tải video lên Colab hoặc mount Drive rồi điền video_path và output_dir.
+3. Đổi resolution từ FHD mặc định sang `4k (3840 x 2160)`.
+4. Dùng `RealESRGAN_x4plus` cho video người thật; không chọn model anime cho video cưới.
+5. Chạy cell upscale, kiểm tra video và tải file cuối về; có thể lưu Drive bằng mount_drive.
+
+Notebook tự đổi 4K dọc thành 2160×3840; nguồn có tỷ lệ khác sẽ bị crop giữa để vừa khung.
+Muốn giữ nguyên toàn bộ khung thì dùng lựa chọn x original, nhưng kích thước đó không chắc đúng 4K.
+Kiểm tra FPS, thời lượng, audio và khuôn mặt sau xuất; không mặc định thêm nội suy 60 fps hoặc làm đẹp mặt.
+Đã kiểm tra code notebook/đường dẫn; chưa chạy GPU Colab hoặc upscale mẫu trong phiên này.
+Kết nối repo không tạo phiên Colab GPU hoặc tự tải video lên Google.
