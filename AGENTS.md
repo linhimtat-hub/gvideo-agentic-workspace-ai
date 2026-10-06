@@ -80,7 +80,14 @@ Không tuyên bố đã render chỉ vì clone repo hoặc mở app thành công
 
 Dùng repo đã có `external/4k-video-upscaler-colab`, không thêm trùng Video2X/Real-ESRGAN.
 Xem phần Upscale video 4K trong README.md và notebook của submodule.
-Runtime thực thi là GPU Google Colab; clone/kết nối không có nghĩa là đã chạy upscale.
+Repo Colab thực thi bằng GPU; có thêm skill upscale-video-4k chạy CPU local theo yêu cầu người dùng.
 Notebook mặc định FHD: chọn 4K; dọc dùng 2160×3840, ngang 3840×2160.
 Giữ identity, không chọn model anime cho người thật. Lưu ý bước crop giữa nếu nguồn khác tỷ lệ.
 Chỉ báo hoàn tất sau khi có file cuối và đã kiểm tra kích thước, FPS, thời lượng và âm thanh.
+
+### Upscale CPU local
+
+Dùng `.agents/skills/upscale-video-4k/` cho yêu cầu không dùng GPU/Colab.
+Runtime Real-ESRGAN/PyTorch cài ngoài workspace, không pip install vào workspace này.
+Đọc SKILL.md: AI và Lanczos là hai chế độ khác nhau; không gọi Lanczos là phục hồi chi tiết AI.
+Giữ mặt thật bằng cách tắt face enhancer, không dùng model anime. Chạy --thu trước render.

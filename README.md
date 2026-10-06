@@ -137,3 +137,15 @@ Muốn giữ nguyên toàn bộ khung thì dùng lựa chọn x original, nhưng
 Kiểm tra FPS, thời lượng, audio và khuôn mặt sau xuất; không mặc định thêm nội suy 60 fps hoặc làm đẹp mặt.
 Đã kiểm tra code notebook/đường dẫn; chưa chạy GPU Colab hoặc upscale mẫu trong phiên này.
 Kết nối repo không tạo phiên Colab GPU hoặc tự tải video lên Google.
+
+## Upscale 4K không dùng GPU
+
+Skill `.agents/skills/upscale-video-4k/` có pipeline CPU local:
+
+- `--mode ai`: Real-ESRGAN general, denoise nhẹ, không GFPGAN/face enhancer; cần runtime/model riêng.
+- `--mode lanczos`: FFmpeg có sẵn, phóng lớn nhanh, không phục hồi chi tiết bằng AI.
+
+Gọi `/upscale-video-4k nâng video này lên 4K bằng CPU, giữ mặt thật và âm thanh`.
+Đầu ra giữ FPS, không crop (thêm viền khi khác tỷ lệ), dọc 2160×3840/ngang 3840×2160.
+Pipeline xuất SDR H.264 8-bit, audio AAC 192k; AI yêu cầu CFR, không HDR hoặc metadata xoay.
+Runtime cài ngoài repo theo references/runtime.md trong skill. CPU AI chậm, đo mẫu trước clip dài.

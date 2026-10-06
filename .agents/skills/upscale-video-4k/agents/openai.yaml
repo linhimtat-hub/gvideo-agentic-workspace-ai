@@ -1,0 +1,4 @@
+interface:
+  display_name: "Upscale video 4K CPU"
+  short_description: "Nâng video lên 4K bằng CPU, giữ FPS và âm thanh"
+  default_prompt: "Dùng $upscale-video-4k để nâng video lên 4K bằng CPU, giữ mặt thật."
