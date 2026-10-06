@@ -67,3 +67,11 @@ Skill này gọi runtime FaceFusion riêng và không dùng Gemini để render.
 Các quy tắc không tạo venv/không pip install áp dụng cho workspace này; runtime FaceFusion được cài ngoài workspace.
 Chạy `--thu` trước, giữ nguyên đầu vào, ghi đầu ra mới dưới `outputs/<dự án>/`.
 Việc chọn nguồn, chọn mặt và log được hướng dẫn trong SKILL.md của skill.
+
+## Thay trang phục local
+
+Dùng `.agents/skills/thay-trang-phuc/` cho đổi đồ theo ảnh mẫu.
+Repo external/CatVTON (ảnh) và external/CatV2TON (video) được cố định bằng submodule.
+Runtime/dependencies/model cài riêng ngoài workspace; cần GPU CUDA.
+CatV2TON cần mask/pose theo dataset, chưa nhận trực tiếp clip bất kỳ.
+Không tuyên bố đã render chỉ vì clone repo hoặc mở app thành công.

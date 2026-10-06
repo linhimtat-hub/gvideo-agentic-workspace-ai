@@ -1,0 +1,4 @@
+interface:
+  display_name: "Thay trang phục"
+  short_description: "Thay trang phục ảnh và chuẩn bị try-on video"
+  default_prompt: "Dùng $thay-trang-phuc để thay váy theo ảnh mẫu, ưu tiên giữ mặt thật."
